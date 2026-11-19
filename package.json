@@ -2,6 +2,21 @@
   "name": "codexpub",
   "private": true,
   "devDependencies": {
-    "@fission-ai/openspec": "2.1.0"
+    "@fission-ai/openspec": "2.1.0",
+    "playwright-core": "1.65.1"
+  },
+  "dependencies": {
+    "csv-parse": "7.0.3",
+    "express": "5.3.0",
+    "pg": "8.23.1"
+  },
+  "type": "module",
+  "scripts": {
+    "start": "node src/start.js",
+    "migrate": "node scripts/admin.js migrate",
+    "demo": "node scripts/admin.js demo",
+    "user": "node scripts/admin.js user",
+    "test": "node --test test/api.test.js",
+    "test:browser": "node --test test/browser.test.js"
   }
 }

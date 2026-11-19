@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="es-CO">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Comercial Aurora · Solicitudes</title>
+  <link rel="stylesheet" href="/styles.css">
+  <script type="module" src="/app.js"></script>
+</head>
+<body>
+  <main id="login" class="login" hidden>
+    <section class="login-brand">
+      <div class="brand"><span class="logo" aria-hidden="true">✦</span><div><strong>Comercial Aurora</strong><small>Centro de atención</small></div></div>
+      <div><span class="eyebrow">OPERACIÓN DE SERVICIO</span><h1>Cada solicitud,<br>bien encaminada.</h1><p>Registra, asigna y da seguimiento a las solicitudes de tus clientes en un mismo lugar.</p></div>
+      <span class="login-footer">Comercial Aurora · Gestión interna</span>
+    </section>
+    <section class="login-content">
+      <form id="login-form" class="login-form">
+        <h2>Inicia sesión</h2>
+        <p>Ingresa con tu cuenta para abrir la bandeja.</p>
+        <label>Usuario<input name="id" autocomplete="username" required maxlength="50"></label>
+        <label>Contraseña<input name="password" type="password" autocomplete="current-password" required maxlength="128"></label>
+        <button class="primary" type="submit">Entrar a la bandeja <span aria-hidden="true">→</span></button>
+        <p id="login-error" class="error" role="alert"></p>
+        <div id="demo-access" hidden><strong>Entorno de demostración</strong><p>Accede con una cuenta de prueba y datos ficticios.</p><div class="inline"><button type="button" id="demo-coordinator" class="secondary">Coordinador</button><button type="button" id="demo-agent" class="secondary">Agente</button></div></div>
+      </form>
+    </section>
+  </main>
+
+  <div id="shell" class="shell" hidden>
+    <aside class="sidebar">
+      <div class="brand"><span class="logo" aria-hidden="true">✦</span><div><strong>Comercial Aurora</strong><small>Centro de atención</small></div></div>
+      <nav aria-label="Principal">
+        <p class="nav-title">ATENCIÓN</p>
+        <button type="button" data-view="inbox" class="nav-link active"><span aria-hidden="true">▤</span> Bandeja de solicitudes</button>
+        <button type="button" id="nav-create" class="nav-link"><span aria-hidden="true">＋</span> Nueva solicitud</button>
+        <div id="coord-nav" hidden>
+          <p class="nav-title">COORDINACIÓN</p>
+          <button type="button" data-view="metrics" class="nav-link"><span aria-hidden="true">▥</span> Indicadores</button>
+          <button type="button" data-view="agents" class="nav-link"><span aria-hidden="true">♙</span> Disponibilidad</button>
+          <button type="button" data-view="data" class="nav-link"><span aria-hidden="true">⇄</span> Importar y exportar</button>
+        </div>
+      </nav>
+      <div class="profile"><span id="initials" class="avatar"></span><div><strong id="user-name"></strong><small id="user-role"></small></div><button type="button" id="logout" title="Cerrar sesión" aria-label="Cerrar sesión">↪</button></div>
+    </aside>
+    <div class="workspace">
+      <header class="topbar"><div><span>Inicio</span><span aria-hidden="true">›</span><strong id="breadcrumb">Solicitudes</strong></div><span id="environment" class="environment" hidden><i></i> Datos de demostración</span></header>
+      <main class="content">
+        <noscript>Activa JavaScript para usar la bandeja.</noscript>
+        <div id="notice" class="notice" role="status" hidden></div>
+        <section id="view-inbox">
+          <div class="page-heading"><div><h1>Bandeja de solicitudes</h1><p>Consulta los casos, sus responsables y el plazo de atención.</p></div><button id="new-request" type="button" class="primary"><span aria-hidden="true">＋</span> Nueva solicitud</button></div>
+          <div class="stats" aria-label="Resumen de solicitudes">
+            <div class="stat"><span class="stat-icon neutral" aria-hidden="true">▤</span><span>Total solicitudes</span><strong id="count-total">—</strong></div>
+            <div class="stat"><span class="stat-icon blue" aria-hidden="true">◷</span><span>Abiertas</span><strong id="count-open">—</strong></div>
+            <div class="stat"><span class="stat-icon red" aria-hidden="true">!</span><span>Vencidas</span><strong id="count-overdue">—</strong></div>
+            <div class="stat"><span class="stat-icon green" aria-hidden="true">✓</span><span>Resueltas y cerradas</span><strong id="count-finished">—</strong></div>
+          </div>
+          <section class="panel inbox-panel" aria-labelledby="list-heading">
+            <div class="panel-heading"><div><h2 id="list-heading">Solicitudes</h2><p id="result-count" aria-live="polite"></p></div><button id="refresh" class="secondary" type="button">↻ Actualizar</button></div>
+            <form id="filters" class="filters" role="search">
+              <label class="search"><span class="sr-only">Buscar solicitudes</span><span aria-hidden="true">⌕</span><input name="q" type="search" placeholder="Buscar por radicado, NIT o cliente"></label>
+              <label><span class="sr-only">Estado</span><select name="state"><option value="">Todos los estados</option></select></label>
+              <label><span class="sr-only">Responsable</span><select name="agent"><option value="">Todos los agentes</option></select></label>
+              <label><span class="sr-only">Plazo</span><select name="deadline"><option value="">Todos los plazos</option><option value="vencidas">Vencidas</option><option value="a-tiempo">A tiempo</option></select></label>
+            </form>
+            <div class="scroll-table"><table><thead><tr><th>Radicado / tipo</th><th>Cliente</th><th>Estado</th><th>Responsable</th><th>Recepción</th><th>Plazo de 48 h</th><th><span class="sr-only">Detalle</span></th></tr></thead><tbody id="requests"></tbody></table></div>
+            <footer class="pager"><span id="page-label"></span><div><button id="prev" class="secondary" type="button">Anterior</button><button id="next" class="secondary" type="button">Siguiente</button></div></footer>
+          </section>
+        </section>
+
+        <section id="view-metrics" hidden>
+          <div class="page-heading"><div><h1>Indicadores</h1><p>Cumplimiento de las 48 horas corridas por fecha de resolución.</p></div></div>
+          <section class="panel standard-panel">
+            <form id="metrics-form" class="inline aligned">
+              <label>Desde<input type="date" name="from" required></label><label>Hasta<input type="date" name="through" required></label><button class="primary">Consultar</button>
+            </form>
+            <div id="metric-result" class="metric-result" aria-live="polite"></div>
+          </section>
+        </section>
+
+        <section id="view-agents" hidden>
+          <div class="page-heading"><div><h1>Disponibilidad de agentes</h1><p>Los casos nuevos se reparten por turnos entre los agentes disponibles.</p></div></div>
+          <section class="panel standard-panel"><ul id="agent-list" class="agent-list"></ul></section>
+        </section>
+
+        <section id="view-data" hidden>
+          <div class="page-heading"><div><h1>Importar y exportar</h1><p>Ensaya la carga, revisa las excepciones y confirma los datos.</p></div><a class="secondary" href="/api/export" download>↓ Exportar JSON</a></div>
+          <section class="panel standard-panel">
+            <form id="import-form">
+              <div class="inline aligned"><label>Datos a importar<select name="kind"><option value="clientes">Directorio de clientes</option><option value="pendientes">Solicitudes pendientes</option></select></label><label>Archivo<input name="file" type="file" accept=".csv,.json" required></label><button class="primary">Ensayar importación</button></div>
+              <p id="import-hint" class="helper"></p>
+            </form>
+            <div id="import-report" hidden>
+              <div class="panel-heading"><div><h2>Resultado de la importación</h2><p id="import-totals" role="status"></p></div><button id="import-confirm" type="button" class="primary" hidden>Confirmar carga</button></div>
+              <div class="scroll-table"><table><thead><tr><th>Fila</th><th>Referencia</th><th>Resultado</th><th>Detalle</th></tr></thead><tbody id="import-rows"></tbody></table></div>
+            </div>
+          </section>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <dialog id="create-dialog">
+    <form id="create-form">
+      <div class="dialog-heading"><div><h2>Nueva solicitud</h2><p>El responsable se asignará por turnos al guardar.</p></div><button type="button" class="close-dialog" aria-label="Cerrar">×</button></div>
+      <label>Buscar cliente<input id="client-search" type="search" placeholder="Escribe el NIT o el nombre" autocomplete="off"></label>
+      <label>Cliente<select name="nit" required><option value="">Selecciona un cliente</option></select><small class="field-error" data-field="nit"></small></label>
+      <div class="form-grid"><label>Canal<select name="channel" required><option value="">Selecciona el canal</option></select><small class="field-error" data-field="channel"></small></label><label>Tipo de solicitud<select name="category" required><option value="">Selecciona el tipo</option></select><small class="field-error" data-field="category"></small></label></div>
+      <label>Referencia de pedido <span class="optional">(opcional)</span><input name="order_ref" maxlength="100"><small class="field-error" data-field="order_ref"></small></label>
+      <label>Descripción<textarea name="description" rows="4" minlength="10" maxlength="5000" required></textarea><small class="field-error" data-field="description"></small></label>
+      <p id="create-error" class="error" role="alert"></p>
+      <div class="dialog-actions"><button class="secondary close-dialog" type="button">Cancelar</button><button class="primary">Guardar radicación</button></div>
+    </form>
+  </dialog>
+  <dialog id="detail-dialog" class="detail-dialog">
+    <div class="dialog-heading"><div><h2 id="detail-ticket"></h2><p id="detail-customer"></p></div><button type="button" class="close-dialog" aria-label="Cerrar">×</button></div>
+    <p id="detail-error" role="alert" class="error"></p>
+    <button id="reload-detail" type="button" class="secondary" hidden>Ver versión vigente</button>
+    <dl id="detail-meta" class="detail-meta"></dl>
+    <p id="detail-description" class="description"></p>
+    <form id="state-form" hidden>
+      <div class="inline aligned"><label>Nuevo estado<select name="state" required></select></label><button class="primary">Guardar estado</button></div>
+      <label id="response-field" hidden>Respuesta de fondo<textarea name="response" rows="3" maxlength="5000"></textarea></label>
+    </form>
+    <form id="reassign-form" hidden>
+      <div class="form-grid"><label>Nuevo responsable<select name="agent_id" required></select></label><label>Motivo<input name="reason" maxlength="1000" required></label></div>
+      <button class="secondary">Reasignar solicitud</button>
+    </form>
+    <section class="history"><h3>Historial de atención</h3><ol id="events"></ol></section>
+  </dialog>
+</body>
+</html>
