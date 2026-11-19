@@ -1,0 +1,284 @@
+{
+  "version": 1,
+  "format": "aurora-archivo",
+  "customers": [
+    {
+      "nit": "001270",
+      "name": "Colegio Senderos de Papel"
+    },
+    {
+      "nit": "001271",
+      "name": "Estudio Inventario Claro"
+    },
+    {
+      "nit": "001272",
+      "name": "Centro Educativo Valle Azul"
+    },
+    {
+      "nit": "001273",
+      "name": "Taller Escritorio Verde"
+    },
+    {
+      "nit": "001274",
+      "name": "Fundación Aula Abierta"
+    }
+  ],
+  "actors": [
+    {
+      "id": "agente1",
+      "name": "Laura Méndez",
+      "role": "agente",
+      "available": true
+    },
+    {
+      "id": "agente2",
+      "name": "Mateo Rojas",
+      "role": "agente",
+      "available": true
+    },
+    {
+      "id": "agente3",
+      "name": "Valentina Cruz",
+      "role": "agente",
+      "available": true
+    },
+    {
+      "id": "agente4",
+      "name": "Diego Silva",
+      "role": "agente",
+      "available": true
+    },
+    {
+      "id": "coord",
+      "name": "Ana Torres",
+      "role": "coordinador",
+      "available": false
+    }
+  ],
+  "requests": [
+    {
+      "nit": "001270",
+      "channel": "correo",
+      "category": "pedido",
+      "description": "Confirmar la fecha de entrega de diez cajas de papel carta.",
+      "order_ref": "PRUEBA-101",
+      "ticket": "AUR-202611-0001",
+      "agent_id": "agente1",
+      "state": "nuevo",
+      "version": 1,
+      "received_at": "2026-11-19T18:31:31.824Z",
+      "issued_at": "2026-11-19T18:31:31.824Z",
+      "resolved_at": null,
+      "response": null,
+      "elapsed_ms": null,
+      "compliant": null,
+      "source_ref": null,
+      "imported_at": null
+    },
+    {
+      "nit": "001271",
+      "channel": "mensajeria",
+      "category": "envio",
+      "description": "Faltan dos cajas de marcadores en el despacho recibido.",
+      "order_ref": "PRUEBA-102",
+      "ticket": "AUR-202611-0002",
+      "agent_id": "agente2",
+      "state": "logistica",
+      "version": 2,
+      "received_at": "2026-11-17T15:31:31.824Z",
+      "issued_at": "2026-11-17T15:31:31.824Z",
+      "resolved_at": null,
+      "response": null,
+      "elapsed_ms": null,
+      "compliant": null,
+      "source_ref": null,
+      "imported_at": null
+    },
+    {
+      "nit": "001272",
+      "channel": "llamada",
+      "category": "stock",
+      "description": "Consultar disponibilidad de carpetas para el próximo periodo escolar.",
+      "order_ref": "PRUEBA-103",
+      "ticket": "AUR-202611-0003",
+      "agent_id": "agente3",
+      "state": "proceso",
+      "version": 2,
+      "received_at": "2026-11-19T04:31:31.824Z",
+      "issued_at": "2026-11-19T04:31:31.824Z",
+      "resolved_at": null,
+      "response": null,
+      "elapsed_ms": null,
+      "compliant": null,
+      "source_ref": null,
+      "imported_at": null
+    },
+    {
+      "nit": "001273",
+      "channel": "correo",
+      "category": "facturacion",
+      "description": "Corregir el nombre del cliente en la factura de prueba.",
+      "order_ref": "PRUEBA-104",
+      "ticket": "AUR-202611-0004",
+      "agent_id": "agente4",
+      "state": "resuelto",
+      "version": 2,
+      "received_at": "2026-11-17T02:31:31.824Z",
+      "issued_at": "2026-11-17T02:31:31.824Z",
+      "resolved_at": "2026-11-17T23:31:31.824Z",
+      "response": "Se documentó la respuesta y se informó al cliente de prueba.",
+      "elapsed_ms": 75600000,
+      "compliant": true,
+      "source_ref": null,
+      "imported_at": null
+    },
+    {
+      "nit": "001274",
+      "channel": "mensajeria",
+      "category": "devolucion",
+      "description": "Solicitar la devolución de dos paquetes de sobres dañados.",
+      "order_ref": "PRUEBA-105",
+      "ticket": "AUR-202611-0005",
+      "agent_id": "agente1",
+      "state": "cerrado",
+      "version": 3,
+      "received_at": "2026-11-16T14:31:31.824Z",
+      "issued_at": "2026-11-16T14:31:31.824Z",
+      "resolved_at": "2026-11-18T18:31:31.824Z",
+      "response": "Se documentó la respuesta y se informó al cliente de prueba.",
+      "elapsed_ms": 187200000,
+      "compliant": false,
+      "source_ref": null,
+      "imported_at": null
+    }
+  ],
+  "events": [
+    {
+      "ticket": "AUR-202611-0001",
+      "actor_id": "agente1",
+      "occurred_at": "2026-11-19T18:31:31.824Z",
+      "action": "radicacion",
+      "before_values": null,
+      "after_values": {
+        "state": "nuevo",
+        "agent_id": "agente1"
+      },
+      "note": null
+    },
+    {
+      "ticket": "AUR-202611-0002",
+      "actor_id": "agente2",
+      "occurred_at": "2026-11-17T15:31:31.824Z",
+      "action": "radicacion",
+      "before_values": null,
+      "after_values": {
+        "state": "nuevo",
+        "agent_id": "agente2"
+      },
+      "note": null
+    },
+    {
+      "ticket": "AUR-202611-0002",
+      "actor_id": "agente2",
+      "occurred_at": "2026-11-17T16:31:31.824Z",
+      "action": "estado",
+      "before_values": {
+        "state": "nuevo"
+      },
+      "after_values": {
+        "state": "logistica"
+      },
+      "note": null
+    },
+    {
+      "ticket": "AUR-202611-0003",
+      "actor_id": "agente3",
+      "occurred_at": "2026-11-19T04:31:31.824Z",
+      "action": "radicacion",
+      "before_values": null,
+      "after_values": {
+        "state": "nuevo",
+        "agent_id": "agente3"
+      },
+      "note": null
+    },
+    {
+      "ticket": "AUR-202611-0003",
+      "actor_id": "agente3",
+      "occurred_at": "2026-11-19T05:31:31.824Z",
+      "action": "estado",
+      "before_values": {
+        "state": "nuevo"
+      },
+      "after_values": {
+        "state": "proceso"
+      },
+      "note": null
+    },
+    {
+      "ticket": "AUR-202611-0004",
+      "actor_id": "agente4",
+      "occurred_at": "2026-11-17T02:31:31.824Z",
+      "action": "radicacion",
+      "before_values": null,
+      "after_values": {
+        "state": "nuevo",
+        "agent_id": "agente4"
+      },
+      "note": null
+    },
+    {
+      "ticket": "AUR-202611-0004",
+      "actor_id": "agente4",
+      "occurred_at": "2026-11-17T23:31:31.824Z",
+      "action": "estado",
+      "before_values": {
+        "state": "nuevo"
+      },
+      "after_values": {
+        "state": "resuelto"
+      },
+      "note": "Se documentó la respuesta y se informó al cliente de prueba."
+    },
+    {
+      "ticket": "AUR-202611-0005",
+      "actor_id": "agente1",
+      "occurred_at": "2026-11-16T14:31:31.824Z",
+      "action": "radicacion",
+      "before_values": null,
+      "after_values": {
+        "state": "nuevo",
+        "agent_id": "agente1"
+      },
+      "note": null
+    },
+    {
+      "ticket": "AUR-202611-0005",
+      "actor_id": "agente1",
+      "occurred_at": "2026-11-18T18:31:31.824Z",
+      "action": "estado",
+      "before_values": {
+        "state": "nuevo"
+      },
+      "after_values": {
+        "state": "resuelto"
+      },
+      "note": "Se documentó la respuesta y se informó al cliente de prueba."
+    },
+    {
+      "ticket": "AUR-202611-0005",
+      "actor_id": "agente1",
+      "occurred_at": "2026-11-18T19:31:31.824Z",
+      "action": "estado",
+      "before_values": {
+        "state": "resuelto"
+      },
+      "after_values": {
+        "state": "cerrado"
+      },
+      "note": null
+    }
+  ],
+  "last_agent": "agente1",
+  "exported_at": "2026-11-19T21:31:31.824Z"
+}
