@@ -1,0 +1,7 @@
+{
+  "name": "codexpub",
+  "private": true,
+  "devDependencies": {
+    "@fission-ai/openspec": "2.1.0"
+  }
+}
