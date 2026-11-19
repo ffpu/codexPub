@@ -1,0 +1,1179 @@
+<!doctype html>
+<html lang="es-CO">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Comercial Aurora · Solicitudes</title>
+  <style>
+:root{color-scheme:light;--forest:#102d24;--forest-dark:#0d251e;--mint:#cfe8d5;--lime:#d9efad;--ink:#172924;--muted:#586a62;--line:#e1e8e2;--paper:#f5f7f3;--white:#fff;--primary:#235c45;--red:#a13939;--radius:13px;font-family:"Segoe UI",system-ui,sans-serif;color:var(--ink);background:var(--paper)}
+*{box-sizing:border-box} [hidden]{display:none!important} body{margin:0} p,h1,h2,h3{margin-top:0} button,input,select,textarea{font:inherit} button{cursor:pointer} button:disabled{cursor:default;opacity:.48} :focus-visible{outline:2px solid #31845b;outline-offset:2px} a{color:inherit} button,a,input,select,textarea{-webkit-tap-highlight-color:transparent}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.primary,.secondary{display:inline-flex;justify-content:center;align-items:center;gap:8px;min-height:39px;border:1px solid transparent;border-radius:8px;padding:8px 13px;text-decoration:none;white-space:nowrap;font-size:.85rem;font-weight:650}
+.primary{background:var(--primary);color:#fff}.primary:hover{background:#164d37}.secondary{background:#fff;border-color:#dce4dd;color:#295042}.secondary:hover{background:#f1f6f1}
+label{display:grid;gap:6px;font-size:.86rem;font-weight:650} input,select,textarea{width:100%;min-width:0;min-height:41px;border:1px solid #d8e3db;border-radius:7px;background:#fff;color:var(--ink);padding:9px 10px;font-weight:400} textarea{resize:vertical} input::placeholder{color:#63736a}
+.login{min-height:100vh;display:grid;grid-template-columns:1.05fr 1fr}.login-brand{background:var(--forest);color:white;display:flex;flex-direction:column;justify-content:space-between;min-height:100vh;padding:46px clamp(25px,6.8vw,106px);background-image:radial-gradient(ellipse at 90% 86%,#255b47 0,transparent 58%)}
+.brand{display:flex;align-items:center;gap:11px;color:#f6fbf7}.brand strong,.brand small{display:block;white-space:nowrap}.brand strong{font-size:.96rem;letter-spacing:-.02em}.brand small{font-size:.72rem;color:#a9c0b2;margin-top:2px}.logo{display:grid;place-items:center;background:var(--lime);color:#15382a;width:36px;height:36px;border-radius:10px;font-size:1.45rem;line-height:1;flex:none}
+.eyebrow{font-size:.7rem;font-weight:750;letter-spacing:.15em;color:#c4dfb2}.login h1{font-size:clamp(2.5rem,5.5vw,5.4rem);letter-spacing:-.07em;line-height:1.03;margin:17px 0}.login-brand p{font-size:1rem;line-height:1.55;color:#cadece;max-width:335px}.login-footer{font-size:.74rem;color:#a9c0b2}.login-content{display:grid;place-items:center;padding:33px}.login-form{width:min(100%,365px);display:grid;gap:16px}.login-form h2{font-size:2rem;letter-spacing:-.05em;margin:0}.login-form p{color:var(--muted);font-size:.9rem;margin:0}.login-form .primary{justify-content:space-between}.login-form #demo-access{padding:15px;background:#ebf2e8;border-radius:10px}.login-form #demo-access p{margin:4px 0 10px}
+.shell{min-height:100vh;display:grid;grid-template-columns:232px minmax(0,1fr)}.sidebar{background:var(--forest-dark);color:#e4f0e5;display:flex;flex-direction:column;padding:24px 15px 16px;position:sticky;top:0;height:100vh}.sidebar .brand{margin:0 8px 36px}.nav-title{color:#99b3a3;font-size:.63rem;font-weight:750;letter-spacing:.12em;margin:0 0 8px 10px}.nav-title:not(:first-child),#coord-nav{margin-top:28px}.nav-link{display:flex;align-items:center;gap:9px;width:100%;text-align:left;color:#cfddd3;background:transparent;border:0;border-radius:7px;padding:10px 9px;margin:3px 0;font-size:.83rem;font-weight:650}.nav-link span{font-size:1.1rem;width:18px;text-align:center;line-height:1}.nav-link:hover,.nav-link.active{background:#244c3d;color:#e0f5cd}.profile{margin-top:auto;display:flex;align-items:center;gap:9px;border-top:1px solid #345346;padding:15px 4px 0;font-size:.78rem}.profile div{flex:1}.profile small{display:block;color:#a9c0b2;margin-top:2px;text-transform:capitalize}.avatar{display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:#cadfbc;color:#254b3a;font-weight:750}.profile button{color:#c3d8c9;border:0;background:none;font-size:1.25rem;padding:6px}
+.topbar{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:0 30px;height:64px;background:#fff;border-bottom:1px solid var(--line);font-size:.8rem}.topbar>div{display:flex;align-items:center;gap:10px;color:var(--muted)}.topbar strong{color:var(--ink)}.environment{display:flex;align-items:center;gap:6px;border:1px solid #dce7db;background:#f1f6ef;padding:6px 9px;border-radius:20px;color:#335b43;font-weight:650}.environment i{width:6px;height:6px;background:#52854e;border-radius:50%}
+.content{padding:30px;max-width:1600px;margin:auto}.page-heading{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:24px}.page-heading h1{font-size:clamp(1.75rem,3vw,2.35rem);letter-spacing:-.055em;margin:0 0 5px}.page-heading p,.panel-heading p{margin:0;color:var(--muted);font-size:.85rem}.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px;margin-bottom:22px}.stat{display:grid;grid-template-columns:33px 1fr;align-items:center;column-gap:9px;row-gap:10px;border:1px solid var(--line);border-radius:var(--radius);padding:14px;background:#fff;color:var(--muted);font-weight:650;font-size:.78rem}.stat strong{grid-column:1/-1;font-size:1.85rem;color:var(--ink);line-height:1;letter-spacing:-.035em}.stat-icon{display:grid;place-items:center;width:32px;height:32px;border-radius:8px;font-size:1.15rem;font-weight:750}.neutral{background:#edf2eb;color:#3d5949}.blue{background:#e9f0f8;color:#315e87}.red{background:#f9e4e2;color:#a43e3b}.green{background:#e0f0df;color:#31694a}
+.panel{background:#fff;border:1px solid var(--line);border-radius:var(--radius);min-width:0}.panel-heading{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:17px 16px 12px}.panel-heading h2{font-size:1.15rem;letter-spacing:-.025em;margin:0 0 4px}.filters{padding:0 16px 14px;display:grid;grid-template-columns:minmax(160px,2fr) repeat(3,minmax(110px,1fr));gap:8px}.filters input,.filters select{font-size:.79rem}.search{position:relative}.search span[aria-hidden]{position:absolute;left:9px;top:6px;font-size:1.3rem;color:var(--muted);pointer-events:none}.search input{padding-left:32px}
+.scroll-table{overflow:auto} table{border-collapse:collapse;width:100%;text-align:left;font-size:.81rem;white-space:nowrap} th{font-size:.69rem;letter-spacing:.02em;color:#4f6258;background:#f1f5ef;font-weight:700} th,td{padding:12px 10px;border-bottom:1px solid #e8eee8} th:first-child,td:first-child{padding-left:16px} td:last-child,th:last-child{padding-right:16px} tbody tr:hover{background:#f9fbf8}.cell-title{display:block;font-weight:680}.cell-muted{display:block;color:var(--muted);font-size:.69rem;margin-top:4px}.ticket-link{padding:0;border:0;background:none;color:#1a593e;font-weight:720}.ticket-link:hover{text-decoration:underline}.open-detail{background:none;border:0;color:#476659;font-size:1.15rem}.badge{display:inline-block;border-radius:20px;padding:4px 8px;font-weight:650;font-size:.68rem}.badge.nuevo{background:#e8f0fa;color:#2b5c87}.badge.proceso{background:#e7f1ed;color:#285944}.badge.logistica,.badge.ventas{background:#fcf1da;color:#785219}.badge.resuelto,.badge.cerrado{background:#e8ede7;color:#4b6151}.deadline{font-weight:650;font-size:.75rem}.deadline.late{color:#a13939}.deadline.soon{color:#805a1d}.empty{text-align:center;color:var(--muted);padding:30px}.pager{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px 16px;color:var(--muted);font-size:.76rem}.pager div{display:flex;gap:8px}.pager button{min-height:32px;padding:5px 8px;font-size:.74rem}
+.notice{padding:10px 13px;background:#e6f2e4;border:1px solid #c9e1c8;border-radius:8px;margin-bottom:14px;font-size:.85rem}.notice.fail{background:#fcecea;border-color:#ecc7c1;color:#872f30}.inline{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.aligned{align-items:end}.standard-panel{padding:18px}.helper,.optional{color:var(--muted);font-weight:400;font-size:.8rem}.helper{margin:12px 0}.agent-list{list-style:none;margin:0;padding:0}.agent-list li{padding:12px 0;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between}.agent-list li:last-child{border:0}.agent-list label{display:flex;align-items:center;gap:6px}.agent-list input{width:18px;min-height:18px;accent-color:var(--primary)}.metric-result{margin-top:16px;min-height:45px}.metric-result strong{display:block;font-size:2rem}
+dialog{width:min(620px,calc(100vw - 22px));max-height:calc(100dvh - 30px);border:1px solid var(--line);border-radius:15px;padding:21px;color:var(--ink);box-shadow:0 13px 54px #0b241d45} dialog::backdrop{background:#11291d80}.dialog-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:12px}.dialog-heading h2{margin:0;font-size:1.4rem;letter-spacing:-.035em}.dialog-heading p{margin:4px 0 0;color:var(--muted);font-size:.82rem}.dialog-heading button{border:0;border-radius:7px;font-size:1.4rem;color:var(--muted);background:var(--paper);width:34px;height:34px}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.dialog-actions{display:flex;justify-content:end;gap:8px;margin-top:14px} #create-form>label,#create-form>.form-grid,#response-field{margin-top:10px}.error,.field-error,.login-form .error{color:var(--red);font-size:.8rem}.error:empty,.field-error:empty{display:none}.detail-meta{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;border-block:1px solid var(--line);padding:12px 0}.detail-meta dt{font-size:.72rem;color:var(--muted)}.detail-meta dd{font-size:.84rem;font-weight:650;margin:3px 0 0;overflow-wrap:anywhere}.description{font-size:.88rem;white-space:pre-wrap;overflow-wrap:anywhere}.detail-dialog form,.history{margin-top:14px;padding-top:13px;border-top:1px solid var(--line)} #reassign-form button{margin-top:7px}.history h3{font-size:.94rem}.history ol{padding-left:18px;font-size:.81rem}.history li{margin:7px 0;overflow-wrap:anywhere}
+@media(max-width:1050px){.shell{grid-template-columns:190px minmax(0,1fr)}.content,.topbar{padding-left:18px;padding-right:18px}.sidebar{padding:20px 10px 15px}.filters{grid-template-columns:1.5fr repeat(3,1fr)}}
+@media(max-width:760px){.shell{display:block}.sidebar{height:auto;position:static;padding:12px;gap:8px}.sidebar .brand{margin:0}.sidebar nav,#coord-nav{display:flex;flex-wrap:wrap;gap:4px;margin:0}.sidebar .nav-title{display:none}.nav-link{width:auto;padding:7px;margin:0}.profile{padding:6px 0 0;margin:0}.topbar{height:44px}.content{padding:17px 12px}.stats{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.filters{grid-template-columns:repeat(2,minmax(0,1fr))}.page-heading{flex-wrap:wrap}.login{grid-template-columns:1fr}.login-brand{min-height:0;padding:22px;gap:23px}.login h1{font-size:2.35rem;margin:7px 0}.login-brand p{margin-bottom:0}.login-footer{display:none}.login-content{padding:24px}.detail-meta{grid-template-columns:1fr 1fr}}
+
+.local-files{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;padding:10px clamp(12px,3vw,30px);background:#edf4eb;border-bottom:1px solid #dce7d9}
+.local-files>div:first-child{display:grid;gap:3px;min-width:0}
+.local-files strong{font-size:.78rem}
+#local-status{font-size:.77rem;color:var(--muted);overflow-wrap:anywhere}
+#local-status.unsaved{color:#8d4b13;font-weight:650}
+.local-files button{min-height:34px}
+.login,.login-brand{min-height:calc(100vh - 57px)}
+.noscript-local{padding:15px}
+@media(max-width:760px){.login-brand,.login{min-height:0}}
+</style>
+</head>
+<body>
+<section class="local-files" aria-label="Archivo de trabajo">
+  <div><strong>Archivo de trabajo</strong><span id="local-status" role="status"></span></div>
+  <div class="inline">
+    <button id="local-new" class="secondary" type="button">Nueva base</button>
+    <button id="local-open" class="secondary" type="button">Abrir JSON</button>
+    <button class="primary" type="button" data-save-local>Guardar JSON</button>
+    <input id="local-open-input" type="file" accept=".json,application/json" aria-label="Seleccionar archivo JSON de Aurora" hidden>
+  </div>
+</section>
+<noscript><p class="noscript-local">Activa JavaScript en el navegador para abrir y gestionar los archivos de Aurora.</p></noscript>
+
+  <main id="login" class="login" hidden>
+    <section class="login-brand">
+      <div class="brand"><span class="logo" aria-hidden="true">✦</span><div><strong>Comercial Aurora</strong><small>Centro de atención</small></div></div>
+      <div><span class="eyebrow">OPERACIÓN DE SERVICIO</span><h1>Cada solicitud,<br>bien encaminada.</h1><p>Registra, asigna y da seguimiento a las solicitudes de tus clientes en un mismo lugar.</p></div>
+      <span class="login-footer">Comercial Aurora · Gestión interna</span>
+    </section>
+    <section class="login-content">
+      <form id="login-form" class="login-form">
+        <h2>Elige tu perfil</h2>
+        <p>Usa un perfil de esta base local. Guarda el archivo JSON antes de cerrar.</p>
+        <label>Perfil de trabajo<select name="id" id="local-profile" required></select></label>
+        <button class="primary" type="submit">Entrar a la bandeja <span aria-hidden="true">→</span></button>
+        <p id="login-error" class="error" role="alert"></p>
+        <div id="demo-access" hidden><strong>Entorno de demostración</strong><p>Accede con una cuenta de prueba y datos ficticios.</p><div class="inline"><button type="button" id="demo-coordinator" class="secondary">Coordinador</button><button type="button" id="demo-agent" class="secondary">Agente</button></div></div>
+      </form>
+    </section>
+  </main>
+
+  <div id="shell" class="shell" hidden>
+    <aside class="sidebar">
+      <div class="brand"><span class="logo" aria-hidden="true">✦</span><div><strong>Comercial Aurora</strong><small>Centro de atención</small></div></div>
+      <nav aria-label="Principal">
+        <p class="nav-title">ATENCIÓN</p>
+        <button type="button" data-view="inbox" class="nav-link active"><span aria-hidden="true">▤</span> Bandeja de solicitudes</button>
+        <button type="button" id="nav-create" class="nav-link"><span aria-hidden="true">＋</span> Nueva solicitud</button>
+        <div id="coord-nav" hidden>
+          <p class="nav-title">COORDINACIÓN</p>
+          <button type="button" data-view="metrics" class="nav-link"><span aria-hidden="true">▥</span> Indicadores</button>
+          <button type="button" data-view="agents" class="nav-link"><span aria-hidden="true">♙</span> Disponibilidad</button>
+          <button type="button" data-view="data" class="nav-link"><span aria-hidden="true">⇄</span> Importar y exportar</button>
+        </div>
+      </nav>
+      <div class="profile"><span id="initials" class="avatar"></span><div><strong id="user-name"></strong><small id="user-role"></small></div><button type="button" id="logout" title="Cambiar perfil" aria-label="Cambiar perfil">↪</button></div>
+    </aside>
+    <div class="workspace">
+      <header class="topbar"><div><span>Inicio</span><span aria-hidden="true">›</span><strong id="breadcrumb">Solicitudes</strong></div><span id="environment" class="environment" hidden><i></i> Datos de demostración</span></header>
+      <main class="content">
+        <noscript>Activa JavaScript para usar la bandeja.</noscript>
+        <div id="notice" class="notice" role="status" hidden></div>
+        <section id="view-inbox">
+          <div class="page-heading"><div><h1>Bandeja de solicitudes</h1><p>Consulta los casos, sus responsables y el plazo de atención.</p></div><button id="new-request" type="button" class="primary"><span aria-hidden="true">＋</span> Nueva solicitud</button></div>
+          <div class="stats" aria-label="Resumen de solicitudes">
+            <div class="stat"><span class="stat-icon neutral" aria-hidden="true">▤</span><span>Total solicitudes</span><strong id="count-total">—</strong></div>
+            <div class="stat"><span class="stat-icon blue" aria-hidden="true">◷</span><span>Abiertas</span><strong id="count-open">—</strong></div>
+            <div class="stat"><span class="stat-icon red" aria-hidden="true">!</span><span>Vencidas</span><strong id="count-overdue">—</strong></div>
+            <div class="stat"><span class="stat-icon green" aria-hidden="true">✓</span><span>Resueltas y cerradas</span><strong id="count-finished">—</strong></div>
+          </div>
+          <section class="panel inbox-panel" aria-labelledby="list-heading">
+            <div class="panel-heading"><div><h2 id="list-heading">Solicitudes</h2><p id="result-count" aria-live="polite"></p></div><button id="refresh" class="secondary" type="button">↻ Actualizar</button></div>
+            <form id="filters" class="filters" role="search">
+              <label class="search"><span class="sr-only">Buscar solicitudes</span><span aria-hidden="true">⌕</span><input name="q" type="search" placeholder="Buscar por radicado, NIT o cliente"></label>
+              <label><span class="sr-only">Estado</span><select name="state"><option value="">Todos los estados</option></select></label>
+              <label><span class="sr-only">Responsable</span><select name="agent"><option value="">Todos los agentes</option></select></label>
+              <label><span class="sr-only">Plazo</span><select name="deadline"><option value="">Todos los plazos</option><option value="vencidas">Vencidas</option><option value="a-tiempo">A tiempo</option></select></label>
+            </form>
+            <div class="scroll-table"><table><thead><tr><th>Radicado / tipo</th><th>Cliente</th><th>Estado</th><th>Responsable</th><th>Recepción</th><th>Plazo de 48 h</th><th><span class="sr-only">Detalle</span></th></tr></thead><tbody id="requests"></tbody></table></div>
+            <footer class="pager"><span id="page-label"></span><div><button id="prev" class="secondary" type="button">Anterior</button><button id="next" class="secondary" type="button">Siguiente</button></div></footer>
+          </section>
+        </section>
+
+        <section id="view-metrics" hidden>
+          <div class="page-heading"><div><h1>Indicadores</h1><p>Cumplimiento de las 48 horas corridas por fecha de resolución.</p></div></div>
+          <section class="panel standard-panel">
+            <form id="metrics-form" class="inline aligned">
+              <label>Desde<input type="date" name="from" required></label><label>Hasta<input type="date" name="through" required></label><button class="primary">Consultar</button>
+            </form>
+            <div id="metric-result" class="metric-result" aria-live="polite"></div>
+          </section>
+        </section>
+
+        <section id="view-agents" hidden>
+          <div class="page-heading"><div><h1>Disponibilidad de agentes</h1><p>Los casos nuevos se reparten por turnos entre los agentes disponibles.</p></div></div>
+          <section class="panel standard-panel"><ul id="agent-list" class="agent-list"></ul></section>
+        </section>
+
+        <section id="view-data" hidden>
+          <div class="page-heading"><div><h1>Importar y exportar</h1><p>Ensaya la carga, revisa las excepciones y confirma los datos.</p></div><button class="secondary" type="button" data-save-local>↓ Guardar JSON</button></div>
+          <section class="panel standard-panel">
+            <form id="import-form">
+              <div class="inline aligned"><label>Datos a importar<select name="kind"><option value="clientes">Directorio de clientes</option><option value="pendientes">Solicitudes pendientes</option></select></label><label>Archivo<input name="file" type="file" accept=".csv,.json" required></label><button class="primary">Ensayar importación</button></div>
+              <p id="import-hint" class="helper"></p>
+            </form>
+            <div id="import-report" hidden>
+              <div class="panel-heading"><div><h2>Resultado de la importación</h2><p id="import-totals" role="status"></p></div><button id="import-confirm" type="button" class="primary" hidden>Confirmar carga</button></div>
+              <div class="scroll-table"><table><thead><tr><th>Fila</th><th>Referencia</th><th>Resultado</th><th>Detalle</th></tr></thead><tbody id="import-rows"></tbody></table></div>
+            </div>
+          </section>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <dialog id="create-dialog">
+    <form id="create-form">
+      <div class="dialog-heading"><div><h2>Nueva solicitud</h2><p>El responsable se asignará por turnos al guardar.</p></div><button type="button" class="close-dialog" aria-label="Cerrar">×</button></div>
+      <label>Buscar cliente<input id="client-search" type="search" placeholder="Escribe el NIT o el nombre" autocomplete="off"></label>
+      <label>Cliente<select name="nit" required><option value="">Selecciona un cliente</option></select><small class="field-error" data-field="nit"></small></label>
+      <div class="form-grid"><label>Canal<select name="channel" required><option value="">Selecciona el canal</option></select><small class="field-error" data-field="channel"></small></label><label>Tipo de solicitud<select name="category" required><option value="">Selecciona el tipo</option></select><small class="field-error" data-field="category"></small></label></div>
+      <label>Referencia de pedido <span class="optional">(opcional)</span><input name="order_ref" maxlength="100"><small class="field-error" data-field="order_ref"></small></label>
+      <label>Descripción<textarea name="description" rows="4" minlength="10" maxlength="5000" required></textarea><small class="field-error" data-field="description"></small></label>
+      <p id="create-error" class="error" role="alert"></p>
+      <div class="dialog-actions"><button class="secondary close-dialog" type="button">Cancelar</button><button class="primary">Guardar radicación</button></div>
+    </form>
+  </dialog>
+  <dialog id="detail-dialog" class="detail-dialog">
+    <div class="dialog-heading"><div><h2 id="detail-ticket"></h2><p id="detail-customer"></p></div><button type="button" class="close-dialog" aria-label="Cerrar">×</button></div>
+    <p id="detail-error" role="alert" class="error"></p>
+    <button id="reload-detail" type="button" class="secondary" hidden>Ver versión vigente</button>
+    <dl id="detail-meta" class="detail-meta"></dl>
+    <p id="detail-description" class="description"></p>
+    <form id="state-form" hidden>
+      <div class="inline aligned"><label>Nuevo estado<select name="state" required></select></label><button class="primary">Guardar estado</button></div>
+      <label id="response-field" hidden>Respuesta de fondo<textarea name="response" rows="3" maxlength="5000"></textarea></label>
+    </form>
+    <form id="reassign-form" hidden>
+      <div class="form-grid"><label>Nuevo responsable<select name="agent_id" required></select></label><label>Motivo<input name="reason" maxlength="1000" required></label></div>
+      <button class="secondary">Reasignar solicitud</button>
+    </form>
+    <section class="history"><h3>Historial de atención</h3><ol id="events"></ol></section>
+  </dialog>
+<script>
+(() => {
+const channels = { llamada: 'Llamada telefónica', correo: 'Correo electrónico', mensajeria: 'Mensajería' };
+const categories = { stock: 'Consulta de stock', pedido: 'Estado del pedido', envio: 'Inconformidad de envío', facturacion: 'Facturación y cobro', devolucion: 'Devolución' };
+const states = { nuevo: 'Nuevo', proceso: 'En proceso', logistica: 'Pendiente logística', ventas: 'Pendiente ventas', resuelto: 'Resuelto', cerrado: 'Cerrado' };
+const openStates = ['nuevo', 'proceso', 'logistica', 'ventas'];
+const limitMs = 48 * 60 * 60 * 1000;
+
+const string = value => typeof value === 'string' ? value.trim() : '';
+
+function validateFields(data) {
+  const record = {
+    nit: string(data?.nit), channel: string(data?.channel), category: string(data?.category),
+    description: string(data?.description), order_ref: string(data?.order_ref) || null
+  };
+  const fields = {};
+  if (!record.nit || record.nit.length > 40) fields.nit = 'Selecciona un cliente del directorio.';
+  if (!Object.hasOwn(channels, record.channel)) fields.channel = 'Selecciona el canal de origen.';
+  if (!Object.hasOwn(categories, record.category)) fields.category = 'Selecciona el tipo de solicitud.';
+  if (record.description.length < 10 || record.description.length > 5000) fields.description = 'Escribe entre 10 y 5000 caracteres.';
+  if (record.order_ref?.length > 100) fields.order_ref = 'Usa máximo 100 caracteres.';
+  return { record, fields };
+}
+
+const hour = 3600000;
+const dateInColombia = new Intl.DateTimeFormat('sv-SE', { timeZone: 'America/Bogota', year: 'numeric', month: '2-digit', day: '2-digit' });
+const defaultActors = [
+  { id: 'agente1', name: 'Laura Méndez', role: 'agente', available: true },
+  { id: 'agente2', name: 'Mateo Rojas', role: 'agente', available: true },
+  { id: 'agente3', name: 'Valentina Cruz', role: 'agente', available: true },
+  { id: 'agente4', name: 'Diego Silva', role: 'agente', available: true },
+  { id: 'coord', name: 'Ana Torres', role: 'coordinador', available: false }
+];
+
+function emptyData() {
+  return { version: 1, format: 'aurora-archivo', customers: [], actors: defaultActors.map(actor => ({ ...actor })),
+    requests: [], events: [], last_agent: null };
+}
+
+class LocalError extends Error {
+  constructor(status, message, fields) {
+    super(message);
+    this.status = status;
+    this.fields = fields;
+  }
+}
+
+function validDate(value) {
+  return typeof value === 'string' && Number.isFinite(Date.parse(value));
+}
+
+function receivedDate(value) {
+  const raw = string(value);
+  const parts = /^(\d{4}-\d\d-\d\d)[T ](\d\d:\d\d)(?::(\d\d)(\.\d{1,3})?)?(Z|[+-]\d\d:\d\d)?$/.exec(raw);
+  if (!parts) return null;
+  const [, day, time, second = '00', fraction = '', zone = '-05:00'] = parts;
+  const bare = day + 'T' + time + ':' + second;
+  const utc = new Date(bare + 'Z');
+  const date = new Date(bare + fraction + zone);
+  if (!Number.isFinite(+utc) || !Number.isFinite(+date) || !utc.toISOString().startsWith(bare)) return null;
+  return date.toISOString();
+}
+
+function nextTicket(data, now, counters = new Map()) {
+  const month = dateInColombia.format(new Date(now)).slice(0, 7).replace('-', '');
+  if (!counters.has(month)) {
+    const latest = data.requests.reduce((max, row) => row.ticket.startsWith('AUR-' + month + '-')
+      ? Math.max(max, Number(row.ticket.slice(-4))) : max, 0);
+    counters.set(month, latest);
+  }
+  const number = counters.get(month) + 1;
+  if (number > 9999) throw new LocalError(409, 'Se agotaron los consecutivos del mes.');
+  counters.set(month, number);
+  return 'AUR-' + month + '-' + String(number).padStart(4, '0');
+}
+
+function appendEvent(data, request, actor, now, action, before, after, note = null) {
+  data.events.push({ ticket: request.ticket, actor_id: actor, occurred_at: now,
+    action, before_values: before, after_values: after, note });
+}
+
+function makeRequest(record, ticket, agent, now, info = {}) {
+  return { ...record, ticket, agent_id: agent, state: 'nuevo', version: 1, received_at: now, issued_at: now,
+    resolved_at: null, response: null, elapsed_ms: null, compliant: null, source_ref: null, imported_at: null, ...info };
+}
+
+function demoData() {
+  const sample = emptyData();
+  sample.customers.push({ nit: '900123456', name: 'Colegio Los Cedros' }, { nit: '001240', name: 'Papelería Norte' },
+    { nit: '900210008', name: 'Estudio Cerezo' });
+  const now = Date.now();
+  const examples = [
+    ['900123456', 'pedido', 'Confirmar la fecha de entrega de los cuadernos.', 3, 'nuevo'],
+    ['001240', 'envio', 'Faltan tres cajas de marcadores en el envío recibido.', 54, 'logistica'],
+    ['900210008', 'facturacion', 'Revisar la factura del pedido de papelería.', 26, 'ventas'],
+    ['900123456', 'stock', 'Se consultó la disponibilidad de cartulina.', 56, 'resuelto']
+  ];
+  examples.forEach(([nit, category, description, age, state], index) => {
+    const received = new Date(now - age * hour).toISOString();
+    const agent = 'agente' + (index + 1);
+    const request = makeRequest({ nit, category, description, channel: 'correo', order_ref: null },
+      nextTicket(sample, now), agent, received);
+    sample.requests.push(request);
+    appendEvent(sample, request, 'coord', received, 'radicacion', null, { agent_id: agent, state: 'nuevo' });
+    if (state === 'resuelto') {
+      const response = 'Se confirmó el inventario al cliente.';
+      const resolved = new Date(Date.parse(received) + 25 * hour).toISOString();
+      Object.assign(request, { state, resolved_at: resolved, response, elapsed_ms: 25 * hour, compliant: true });
+      appendEvent(sample, request, agent, resolved, 'estado', { state: 'nuevo' }, { state }, response);
+    } else if (state !== 'nuevo') {
+      request.state = state;
+      appendEvent(sample, request, agent, new Date(Date.parse(received) + hour).toISOString(), 'estado', { state: 'nuevo' }, { state });
+    }
+  });
+  sample.last_agent = 'agente4';
+  return sample;
+}
+
+function fromFile(raw) {
+  function check(condition, message) {
+    if (!condition) throw new LocalError(400, message);
+  }
+  check(raw?.version === 1 && ['customers','actors','requests','events'].every(key => Array.isArray(raw[key])),
+    'El archivo debe ser una exportación JSON de Comercial Aurora.');
+  const customers = raw.customers.map(row => {
+    check(row && typeof row.nit === 'string' && row.nit.trim() && string(row.name), 'El archivo contiene un cliente sin NIT o razón social.');
+    return { nit: row.nit.trim(), name: row.name.trim() };
+  });
+  const actors = raw.actors.map(row => {
+    check(row && string(row.id) && string(row.name) && ['agente','coordinador'].includes(row.role), 'El archivo contiene un perfil inválido.');
+    return { id: row.id.trim(), name: row.name.trim(), role: row.role, available: row.role === 'agente' && row.available !== false };
+  });
+  const ids = new Set(actors.map(row => row.id));
+  const agents = new Set(actors.filter(row => row.role === 'agente').map(row => row.id));
+  const nits = new Set(customers.map(row => row.nit));
+  check(ids.size === actors.length && nits.size === customers.length && agents.size && actors.some(row => row.role === 'coordinador'),
+    'Revisa los NIT y perfiles duplicados. La base requiere al menos un agente y un coordinador.');
+  const sources = new Set();
+  const requests = raw.requests.map(row => {
+    const { record, fields } = validateFields(row);
+    check(row && /^AUR-\d{6}-\d{4}$/.test(row.ticket) && nits.has(record.nit) && agents.has(row.agent_id)
+      && Object.hasOwn(states, row.state) && validDate(row.received_at) && !Object.keys(fields).length,
+    'Hay solicitudes con datos no válidos o referencias a clientes o agentes inexistentes.');
+    const closed = !openStates.includes(row.state);
+    check(closed === validDate(row.resolved_at) && (!closed || Date.parse(row.resolved_at) >= Date.parse(row.received_at)),
+      'Hay solicitudes con fechas de resolución incoherentes.');
+    const elapsed = closed ? Date.parse(row.resolved_at) - Date.parse(row.received_at) : null;
+    const ref = string(row.source_ref) || null;
+    check(!ref || !sources.has(ref), 'El archivo contiene referencias de importación duplicadas.');
+    if (ref) sources.add(ref);
+    return makeRequest(record, row.ticket, row.agent_id, new Date(row.received_at).toISOString(), {
+      state: row.state, version: Number.isSafeInteger(row.version) && row.version > 0 ? row.version : 1,
+      issued_at: validDate(row.issued_at) ? new Date(row.issued_at).toISOString() : new Date(row.received_at).toISOString(),
+      response: string(row.response) || null, resolved_at: closed ? new Date(row.resolved_at).toISOString() : null,
+      elapsed_ms: elapsed, compliant: closed ? elapsed <= limitMs : null, source_ref: ref,
+      imported_at: validDate(row.imported_at) ? new Date(row.imported_at).toISOString() : null
+    });
+  });
+  const tickets = new Set(requests.map(row => row.ticket));
+  check(tickets.size === requests.length, 'El archivo contiene radicados duplicados.');
+  const events = [];
+  for (const row of raw.events) {
+    check(row && tickets.has(row.ticket) && ids.has(row.actor_id) && validDate(row.occurred_at)
+      && ['radicacion', 'migracion', 'reasignacion', 'estado'].includes(row.action), 'El archivo contiene eventos de historial que no se pueden relacionar.');
+    const values = value => value && typeof value === 'object' ? {
+      state: string(value.state), agent_id: string(value.agent_id), source_ref: string(value.source_ref)
+    } : null;
+    appendEvent({ events }, { ticket: row.ticket }, row.actor_id, new Date(row.occurred_at).toISOString(),
+      row.action, values(row.before_values), values(row.after_values), string(row.note) || null);
+  }
+  return { version: 1, format: 'aurora-archivo', customers, actors, requests, events,
+    last_agent: agents.has(raw.last_agent) ? raw.last_agent : null };
+}
+
+function readCsv(source) {
+  const first = source.split(/\r?\n/, 1)[0];
+  const delimiter = first.includes(';') && !first.includes(',') ? ';' : ',';
+  const table = [];
+  let row = [];
+  let field = '';
+  let quoted = false;
+  let endedQuote = false;
+  const pushField = () => {
+    row.push(field);
+    field = '';
+    endedQuote = false;
+  };
+  const pushRow = () => {
+    pushField();
+    if (row.length !== 1 || row[0] !== '') table.push(row);
+    row = [];
+  };
+  for (let i = 0; i < source.length; i++) {
+    const char = source[i];
+    if (quoted) {
+      if (char !== '"') field += char;
+      else if (source[i + 1] === '"') { field += '"'; i++; }
+      else { quoted = false; endedQuote = true; }
+    } else if (char === delimiter) pushField();
+    else if (char === '\n' || char === '\r') {
+      if (char === '\r' && source[i + 1] === '\n') i++;
+      pushRow();
+    } else if (char === '"' && field === '' && !endedQuote) quoted = true;
+    else if (char === '"' || endedQuote) throw new Error('Comillas incorrectas.');
+    else field += char;
+  }
+  if (quoted) throw new Error('Comillas sin cerrar.');
+  if (row.length || field || endedQuote) pushRow();
+  const headers = table.shift()?.map(value => value.trim()) || [];
+  if (!headers.length || headers.some(value => !value) || new Set(headers).size !== headers.length) throw new Error('Encabezados no válidos.');
+  return table.map(values => {
+    if (values.length !== headers.length) throw new Error('Todas las filas deben tener las columnas del encabezado.');
+    return Object.fromEntries(headers.map((key, i) => [key, values[i]]));
+  });
+}
+
+function parseImport(kind, body) {
+  const content = typeof body.content === 'string' ? body.content.replace(/^\uFEFF/, '') : '';
+  if (!content.trim()) throw new LocalError(400, 'Selecciona un archivo con datos.');
+  let rows;
+  try {
+    if (body.format === 'csv') rows = readCsv(content);
+    else if (body.format === 'json' && kind === 'clientes') rows = JSON.parse(content);
+    else throw new Error('Formato no admitido.');
+  } catch (error) {
+    throw new LocalError(400, 'El archivo no corresponde al formato seleccionado. ' + error.message);
+  }
+  if (!Array.isArray(rows) || !rows.length || rows.length > 5000 || rows.some(row => !row || typeof row !== 'object' || Array.isArray(row))) {
+    throw new LocalError(400, 'El archivo debe contener de 1 a 5.000 registros con columnas.');
+  }
+  return rows;
+}
+
+function importRecords(data, kind, body, actor, now) {
+  const isCustomer = kind === 'clientes';
+  if (!isCustomer && kind !== 'pendientes') throw new LocalError(404, 'Importación desconocida.');
+  const rows = parseImport(kind, body);
+  const key = isCustomer ? 'nit' : 'source_ref';
+  const clients = new Map(data.customers.map(row => [row.nit, row]));
+  const agents = new Set(data.actors.filter(row => row.role === 'agente').map(row => row.id));
+  const imported = new Map(data.requests.filter(row => row.source_ref).map(row => [row.source_ref, row.ticket]));
+  const counts = new Map();
+  for (const row of rows) {
+    const ref = string(row[key]);
+    counts.set(ref, (counts.get(ref) || 0) + 1);
+  }
+  const ready = [];
+  const report = rows.map((row, index) => {
+    const ref = string(row[key]);
+    const result = (status, message, ticket) => ({ row: index + 1, ref, status, message, ticket });
+    if (!ref || ref.length > (isCustomer ? 40 : 150)) return result('excepcion', 'Referencia obligatoria o demasiado larga.');
+    if (imported.has(ref)) return result('duplicado', 'Solicitud ya importada.', imported.get(ref));
+    if (counts.get(ref) > 1) return result('duplicado', 'Referencia repetida en el archivo.');
+    if (isCustomer) {
+      const name = string(row.name);
+      if (!name || name.length > 200) return result('excepcion', 'Razón social obligatoria, de máximo 200 caracteres.');
+      ready.push({ index, nit: ref, name });
+    } else {
+      const { record, fields } = validateFields(row);
+      const received = receivedDate(row.received_at);
+      const agent = string(row.agent_id);
+      const state = string(row.state);
+      const problems = Object.values(fields);
+      if (!clients.has(record.nit)) problems.push('Cliente fuera del directorio.');
+      if (!agents.has(agent)) problems.push('Responsable no identificado.');
+      if (!openStates.includes(state)) problems.push('Se requiere un estado abierto.');
+      if (!received || received > now) problems.push('Fecha de recepción inválida o futura.');
+      if (problems.length) return result('excepcion', problems.join(' '));
+      ready.push({ index, ref, record, received, agent, state });
+    }
+    return result('listo', 'Registro apto.');
+  });
+
+  const canConfirm = !report.some(row => row.status === 'excepcion' || (row.status === 'duplicado' && !row.ticket));
+  const confirmed = body.confirm === true && canConfirm;
+  if (confirmed) {
+    const counters = new Map();
+    for (const item of ready) {
+      let ticket;
+      if (isCustomer) clients.set(item.nit, { nit: item.nit, name: item.name });
+      else {
+        ticket = nextTicket(data, now, counters);
+        const record = makeRequest(item.record, ticket, item.agent, now,
+          { state: item.state, received_at: item.received, source_ref: item.ref, imported_at: now });
+        data.requests.push(record);
+        appendEvent(data, record, actor.id, now, 'migracion', null, { agent_id: item.agent, state: item.state, source_ref: item.ref });
+      }
+      Object.assign(report[item.index], { ticket, status: 'cargado', message: isCustomer ? 'Cliente guardado.' : 'Solicitud importada.' });
+    }
+    if (isCustomer && ready.length) data.customers = [...clients.values()];
+  }
+  const totals = { total: report.length, listo: 0, duplicado: 0, excepcion: 0, cargado: 0 };
+  for (const row of report) totals[row.status]++;
+  return { rows: report, totals, confirmed, canConfirm };
+}
+
+let dataset = demoData();
+let activeActor = null;
+let fileName = 'Datos de demostración';
+let dirty = false;
+let keySequence = 0;
+const recentSaves = new Map();
+
+function refreshFileStatus(message = '') {
+  const status = document.querySelector('#local-status');
+  status.textContent = [fileName, dirty ? 'Cambios sin guardar' : '', message].filter(Boolean).join(' · ');
+  status.classList.toggle('unsaved', dirty);
+}
+
+function replaceData(data, name) {
+  dataset = data;
+  activeActor = null;
+  fileName = name;
+  dirty = false;
+  recentSaves.clear();
+  refreshFileStatus();
+  const profiles = document.querySelector('#local-profile');
+  profiles.replaceChildren(new Option('Selecciona un perfil', ''),
+    ...data.actors.map(actor => new Option(actor.name + ' · ' + actor.role, actor.id)));
+  window.dispatchEvent(new Event('aurora-local-reset'));
+}
+
+function saveFile() {
+  const content = JSON.stringify({ ...dataset, exported_at: new Date().toISOString() }, null, 2) + '\n';
+  const url = URL.createObjectURL(new Blob([content], { type: 'application/json' }));
+  const link = document.createElement('a');
+  const suggested = 'aurora-' + dateInColombia.format(new Date()) + '.json';
+  link.href = url;
+  link.download = suggested;
+  document.body.append(link);
+  link.click();
+  link.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 60_000);
+  dirty = false;
+  fileName = suggested;
+  refreshFileStatus('Descarga solicitada al navegador');
+}
+
+const mayReplace = () => !dirty || window.confirm('Hay cambios sin guardar. ¿Deseas descartarlos y abrir otra base?');
+const lookupActor = id => dataset.actors.find(actor => actor.id === id);
+const userView = ({ id, name, role }) => ({ id, name, role });
+const agents = () => dataset.actors.filter(actor => actor.role === 'agente').sort((a, b) => a.id.localeCompare(b.id));
+
+function decorate(row, clients, actors) {
+  return { ...row, customer: clients.get(row.nit)?.name, agent: actors.get(row.agent_id)?.name };
+}
+
+function detail(ticket, now) {
+  const row = dataset.requests.find(item => item.ticket === ticket);
+  if (!row) throw new LocalError(404, 'No encontramos la solicitud.');
+  const actorMap = new Map(dataset.actors.map(actor => [actor.id, actor]));
+  const events = dataset.events.filter(event => event.ticket === ticket)
+    .sort((a, b) => a.occurred_at.localeCompare(b.occurred_at))
+    .map(event => ({ ...event, actor: actorMap.get(event.actor_id)?.name || event.actor_id }));
+  return { request: decorate(row, new Map(dataset.customers.map(client => [client.nit, client])), actorMap), events, now };
+}
+
+function list(query, now) {
+  const clients = new Map(dataset.customers.map(client => [client.nit, client]));
+  const actors = new Map(dataset.actors.map(actor => [actor.id, actor]));
+  const all = dataset.requests.map(row => decorate(row, clients, actors));
+  const keyword = string(query.get('q')).toLocaleLowerCase('es-CO');
+  const state = query.get('state');
+  const agent = query.get('agent');
+  const deadline = query.get('deadline');
+  const open = row => openStates.includes(row.state);
+  const overdue = row => open(row) && Date.parse(now) - Date.parse(row.received_at) > limitMs;
+  const selected = all.filter(row => (!keyword || [row.ticket, row.nit, row.customer].some(value => value?.toLocaleLowerCase('es-CO').includes(keyword)))
+    && (!state || row.state === state) && (!agent || row.agent_id === agent)
+    && (deadline === 'vencidas' ? overdue(row) : deadline === 'a-tiempo' ? open(row) && !overdue(row) : true));
+  selected.sort((a, b) => b.received_at.localeCompare(a.received_at) || b.ticket.localeCompare(a.ticket));
+  const size = 20;
+  const page = Math.max(1, Math.min(Math.ceil(selected.length / size) || 1, Number.parseInt(query.get('page'), 10) || 1));
+  const opened = all.filter(open).length;
+  return { requests: selected.slice((page - 1) * size, page * size), page, size, total: selected.length, now,
+    summary: { total: all.length, open: opened, overdue: all.filter(overdue).length, finished: all.length - opened } };
+}
+
+function markDirty() {
+  dirty = true;
+  refreshFileStatus();
+}
+
+function createRecord(actor, body, key, now) {
+  const { record, fields } = validateFields(body);
+  if (!dataset.customers.some(client => client.nit === record.nit)) fields.nit = 'Selecciona un cliente del directorio.';
+  if (Object.keys(fields).length) throw new LocalError(400, 'Revisa los datos de la solicitud.', fields);
+  const saveKey = actor.id + ':' + key;
+  const payload = JSON.stringify(record);
+  const previous = key && recentSaves.get(saveKey);
+  if (previous) {
+    if (previous.payload !== payload) throw new LocalError(409, 'La clave corresponde a una radicación diferente.');
+    return detail(previous.ticket, now);
+  }
+  const available = agents().filter(agent => agent.available);
+  if (!available.length) throw new LocalError(409, 'No hay agentes disponibles. Habilita un agente desde el perfil de coordinación.');
+  const next = available.find(agent => agent.id.localeCompare(dataset.last_agent || '') > 0) || available[0];
+  const ticket = nextTicket(dataset, now);
+  const row = makeRequest(record, ticket, next.id, now);
+  dataset.requests.push(row);
+  dataset.last_agent = next.id;
+  appendEvent(dataset, row, actor.id, now, 'radicacion', null, { state: 'nuevo', agent_id: next.id });
+  if (key) recentSaves.set(saveKey, { ticket, payload });
+  markDirty();
+  return detail(ticket, now);
+}
+
+function requireCoordinator(actor) {
+  if (actor.role !== 'coordinador') throw new LocalError(403, 'Esta operación está reservada al perfil de coordinación.');
+}
+
+function editRecord(ticket, actor, body, now) {
+  const row = dataset.requests.find(item => item.ticket === ticket);
+  if (!row) throw new LocalError(404, 'No encontramos la solicitud.');
+  if (actor.role !== 'coordinador' && actor.id !== row.agent_id) throw new LocalError(403, 'Solo puedes actualizar tus solicitudes asignadas.');
+  if (row.version !== body.version) throw new LocalError(409, 'El caso cambió. Revisa la versión vigente antes de guardar.');
+  if (body.action === 'reasignar') {
+    requireCoordinator(actor);
+    const agent = lookupActor(body.agent_id);
+    const reason = string(body.reason);
+    if (!openStates.includes(row.state) || !agent?.available || agent.role !== 'agente' || agent.id === row.agent_id || !reason || reason.length > 1000) {
+      throw new LocalError(400, 'Selecciona otro agente disponible e indica el motivo, de máximo 1000 caracteres.');
+    }
+    const before = row.agent_id;
+    row.agent_id = agent.id;
+    appendEvent(dataset, row, actor.id, now, 'reasignacion', { agent_id: before }, { agent_id: agent.id }, reason);
+  } else if (body.action === 'estado') {
+    const next = body.state;
+    const allowed = openStates.includes(row.state) ? [...openStates, 'resuelto'] : row.state === 'resuelto' ? ['cerrado'] : [];
+    if (!allowed.includes(next) || next === row.state) throw new LocalError(400, 'El cambio de estado no es válido.');
+    const before = row.state;
+    const response = string(body.response);
+    if (next === 'resuelto') {
+      if (!response || response.length > 5000) throw new LocalError(400, 'Escribe una respuesta de fondo de máximo 5000 caracteres.');
+      const elapsed = Date.parse(now) - Date.parse(row.received_at);
+      if (elapsed < 0) throw new LocalError(400, 'La hora de resolución es anterior a la recepción. Revisa el reloj del equipo.');
+      Object.assign(row, { resolved_at: now, response, elapsed_ms: elapsed, compliant: elapsed <= limitMs });
+    }
+    row.state = next;
+    appendEvent(dataset, row, actor.id, now, 'estado', { state: before }, { state: next }, next === 'resuelto' ? response : null);
+  } else throw new LocalError(400, 'Acción desconocida.');
+  row.version++;
+  markDirty();
+  return detail(ticket, now);
+}
+
+function metrics(query) {
+  const from = receivedDate((query.get('from') || '') + 'T00:00');
+  const through = receivedDate((query.get('through') || '') + 'T00:00');
+  if (!from || !through || from > through) throw new LocalError(400, 'Selecciona un periodo válido.');
+  const until = Date.parse(through) + 24 * hour;
+  const results = dataset.requests.filter(row => row.resolved_at >= from && Date.parse(row.resolved_at) < until);
+  const compliant = results.filter(row => row.compliant).length;
+  return { resolved: results.length, compliant, percent: results.length ? compliant / results.length * 100 : null };
+}
+
+function dispatch(route, { method, headers, body: input }) {
+  const { pathname, searchParams } = new URL(route, 'http://aurora.local');
+  const [, , resource, id] = pathname.split('/').map(decodeURIComponent);
+  const now = new Date().toISOString();
+  const body = input ? JSON.parse(input) : {};
+  if (resource === 'config') return { mode: 'local', channels, categories, states };
+  if (resource === 'login' && method === 'POST') {
+    const actor = lookupActor(body.id);
+    if (!actor) throw new LocalError(400, 'Selecciona un perfil de trabajo.');
+    activeActor = actor.id;
+    return userView(actor);
+  }
+  const actor = lookupActor(activeActor);
+  if (!actor) throw new LocalError(401, 'Selecciona un perfil para continuar.');
+  if (resource === 'logout') {
+    activeActor = null;
+    return { ok: true };
+  }
+  if (resource === 'me') return userView(actor);
+  if (resource === 'customers') {
+    const q = string(searchParams.get('q')).toLocaleLowerCase('es-CO');
+    return dataset.customers.filter(row => row.nit.includes(q) || row.name.toLocaleLowerCase('es-CO').includes(q))
+      .sort((a, b) => Number(b.nit === q) - Number(a.nit === q) || a.name.localeCompare(b.name, 'es-CO')).slice(0, 25);
+  }
+  if (resource === 'agents') {
+    if (method === 'GET') return agents();
+    requireCoordinator(actor);
+    const agent = lookupActor(id);
+    if (!agent || agent.role !== 'agente') throw new LocalError(404, 'No encontramos el agente.');
+    if (typeof body.available !== 'boolean') throw new LocalError(400, 'Indica la disponibilidad.');
+    agent.available = body.available;
+    markDirty();
+    return agent;
+  }
+  if (resource === 'requests') {
+    if (method === 'POST') return createRecord(actor, body, headers['Idempotency-Key'], now);
+    if (method === 'PATCH') return editRecord(id, actor, body, now);
+    return id ? detail(id, now) : list(searchParams, now);
+  }
+  if (resource === 'metrics') {
+    requireCoordinator(actor);
+    return metrics(searchParams);
+  }
+  if (resource === 'import') {
+    requireCoordinator(actor);
+    const before = body.confirm === true ? structuredClone(dataset) : dataset;
+    const result = importRecords(before, id, body, actor, now);
+    if (result.totals.cargado) {
+      dataset = before;
+      markDirty();
+    }
+    return result;
+  }
+  throw new LocalError(404, 'Operación desconocida.');
+}
+
+globalThis.auroraLocal = {
+  newKey: () => Date.now() + '-' + (++keySequence),
+  async request(route, options) {
+    try {
+      const result = dispatch(route, options);
+      return { ok: true, json: async () => result };
+    } catch (error) {
+      return { ok: false, status: error.status || 500, json: async () => ({ error: error.message, fields: error.fields }) };
+    }
+  }
+};
+
+const picker = document.querySelector('#local-open-input');
+document.querySelector('#local-open').addEventListener('click', () => picker.click());
+picker.addEventListener('change', async () => {
+  const [file] = picker.files;
+  picker.value = '';
+  if (!file) return;
+  try {
+    if (file.size > 50 * 1024 * 1024) throw new LocalError(400, 'El archivo supera 50 MB.');
+    const data = fromFile(JSON.parse((await file.text()).replace(/^\uFEFF/, '')));
+    if (mayReplace()) replaceData(data, file.name);
+  } catch (error) {
+    refreshFileStatus(error instanceof SyntaxError ? 'El archivo no contiene JSON válido.' : error.message);
+  }
+});
+document.querySelector('#local-new').addEventListener('click', () => {
+  if (mayReplace()) replaceData(emptyData(), 'Archivo nuevo');
+});
+document.querySelectorAll('[data-save-local]').forEach(button => button.addEventListener('click', saveFile));
+window.addEventListener('beforeunload', event => {
+  if (dirty) {
+    event.preventDefault();
+    event.returnValue = '';
+  }
+});
+replaceData(dataset, fileName);
+
+})();
+</script>
+<script type="module">
+const $ = selector => document.querySelector(selector);
+const all = selector => [...document.querySelectorAll(selector)];
+const formData = form => Object.fromEntries(new FormData(form));
+const openStates = ['nuevo', 'proceso', 'logistica', 'ventas'];
+const dateTime = new Intl.DateTimeFormat('es-CO', { timeZone: 'America/Bogota', dateStyle: 'short', timeStyle: 'short' });
+const dateOnly = new Intl.DateTimeFormat('en-CA', { timeZone: 'America/Bogota', year: 'numeric', month: '2-digit', day: '2-digit' });
+const percentage = new Intl.NumberFormat('es-CO', { maximumFractionDigits: 1 });
+const duration = new Intl.NumberFormat('es-CO', { maximumFractionDigits: 2 });
+const title = { inbox: 'Solicitudes', metrics: 'Indicadores', agents: 'Disponibilidad', data: 'Importar y exportar' };
+const actionLabel = { radicacion: 'Radicación', migracion: 'Importación', reasignacion: 'Reasignación', estado: 'Cambio de estado' };
+const rowStatus = { listo: 'Listo', duplicado: 'Duplicado', excepcion: 'Excepción', cargado: 'Cargado' };
+const deadlineMs = 48 * 3600000;
+
+let config;
+let user;
+let agents = [];
+let view = 'inbox';
+let page = 1;
+let inboxGeneration = 0;
+let customerGeneration = 0;
+let currentDetail;
+let createKey;
+let lastImport;
+let noticeTimeout;
+
+async function api(route, options = {}) {
+  const { method = 'GET', data, headers } = options;
+  const transport = globalThis.auroraLocal?.request ?? fetch;
+  const response = await transport('/api' + route, {
+    method,
+    headers: { ...(data === undefined ? {} : { 'Content-Type': 'application/json' }), ...headers },
+    body: data === undefined ? undefined : JSON.stringify(data)
+  });
+  const result = await response.json();
+  if (response.ok) return result;
+  const error = new Error(result.error || 'No se pudo completar la operación.');
+  error.status = response.status;
+  error.fields = result.fields;
+  if (response.status === 401 && user) showLogin();
+  throw error;
+}
+
+function element(tag, text, className) {
+  const node = document.createElement(tag);
+  if (text !== undefined) node.textContent = text;
+  if (className) node.className = className;
+  return node;
+}
+
+function options(select, values, placeholder, keepValue = false) {
+  const value = keepValue ? select.value : '';
+  select.replaceChildren(new Option(placeholder, ''), ...values.map(([key, label]) => new Option(label, key)));
+  if ([...select.options].some(option => option.value === value)) select.value = value;
+}
+
+function notice(message, error = false) {
+  const box = $('#notice');
+  clearTimeout(noticeTimeout);
+  box.textContent = message;
+  box.classList.toggle('fail', error);
+  box.hidden = !message;
+  if (message && !error) noticeTimeout = setTimeout(() => { box.hidden = true; }, 4500);
+}
+
+function showLogin() {
+  user = null;
+  inboxGeneration++;
+  customerGeneration++;
+  currentDetail = null;
+  createKey = null;
+  lastImport = null;
+  all('dialog[open]').forEach(dialog => dialog.close());
+  $('#create-form').reset();
+  $('#import-form').reset();
+  $('#import-report').hidden = true;
+  $('#import-rows').replaceChildren();
+  $('#requests').replaceChildren();
+  $('#login-form').reset();
+  $('#login-error').textContent = '';
+  $('#shell').hidden = true;
+  $('#login').hidden = false;
+  $('#demo-access').hidden = config?.mode !== 'demo';
+}
+
+async function showApp(account) {
+  user = account;
+  $('#login').hidden = true;
+  $('#shell').hidden = false;
+  $('#environment').hidden = config.mode !== 'demo';
+  $('#coord-nav').hidden = user.role !== 'coordinador';
+  $('#user-name').textContent = user.name;
+  $('#user-role').textContent = user.role;
+  $('#initials').textContent = user.name.split(/\s+/).slice(0, 2).map(part => part[0]).join('');
+  options($('#filters select[name=state]'), Object.entries(config.states), 'Todos los estados');
+  options($('#create-form select[name=channel]'), Object.entries(config.channels), 'Selecciona el canal');
+  options($('#create-form select[name=category]'), Object.entries(config.categories), 'Selecciona el tipo');
+  $('#filters').reset();
+  const today = dateOnly.format(new Date());
+  $('#metrics-form input[name=from]').value = today.slice(0, 8) + '01';
+  $('#metrics-form input[name=through]').value = today;
+  page = 1;
+  await selectView('inbox');
+}
+
+async function login(data) {
+  const button = $('#login-form button[type=submit]');
+  button.disabled = true;
+  $('#login-error').textContent = '';
+  try {
+    await showApp(await api('/login', { method: 'POST', data }));
+  } catch (error) {
+    $('#login-error').textContent = error.message;
+  } finally {
+    button.disabled = false;
+  }
+}
+
+async function fetchAgents() {
+  agents = await api('/agents');
+  options($('#filters select[name=agent]'), agents.map(agent => [agent.id, agent.name]), 'Todos los agentes', true);
+}
+
+async function selectView(next) {
+  view = next;
+  $('#breadcrumb').textContent = title[next];
+  Object.keys(title).forEach(key => { $('#view-' + key).hidden = key !== next; });
+  all('[data-view]').forEach(button => {
+    button.classList.toggle('active', button.dataset.view === next);
+    if (button.dataset.view === next) button.setAttribute('aria-current', 'page');
+    else button.removeAttribute('aria-current');
+  });
+  notice('');
+  if (next === 'inbox') {
+    await fetchAgents();
+    await loadInbox();
+  }
+  if (next === 'metrics') await loadMetrics();
+  if (next === 'agents') {
+    await fetchAgents();
+    renderAgents();
+  }
+}
+
+function deadlineText(row, now) {
+  if (row.resolved_at) {
+    return { label: row.compliant ? 'Cumplió' : 'Fuera de plazo', className: row.compliant ? '' : 'late', detail: duration.format(Number(row.elapsed_ms) / 3600000) + ' h de atención' };
+  }
+  const remaining = +new Date(row.received_at) + deadlineMs - now;
+  const minutes = Math.max(1, Math.ceil(Math.abs(remaining) / 60000));
+  const amount = minutes >= 60 ? Math.floor(minutes / 60) + ' h ' + (minutes % 60) + ' min' : minutes + ' min';
+  if (remaining < 0) return { label: 'Vencida · ' + amount, className: 'late' };
+  return { label: remaining === 0 ? 'En el límite' : 'Quedan ' + amount, className: remaining <= 12 * 3600000 ? 'soon' : '' };
+}
+
+function cell(row, main, secondary) {
+  const td = document.createElement('td');
+  td.append(main instanceof Node ? main : element('span', main, 'cell-title'));
+  if (secondary) td.append(element('span', secondary, 'cell-muted'));
+  row.append(td);
+}
+
+async function loadInbox() {
+  const generation = ++inboxGeneration;
+  const filters = new URLSearchParams({ ...formData($('#filters')), page });
+  const result = await api('/requests?' + filters);
+  if (generation !== inboxGeneration || !user) return;
+  for (const [key, value] of Object.entries(result.summary)) $('#count-' + key).textContent = value;
+  $('#result-count').textContent = result.total + (result.total === 1 ? ' solicitud encontrada' : ' solicitudes encontradas');
+  const tbody = $('#requests');
+  const rows = result.requests.map(request => {
+    const row = document.createElement('tr');
+    const button = element('button', request.ticket, 'ticket-link');
+    button.type = 'button';
+    button.addEventListener('click', () => run(() => openDetail(request.ticket)));
+    cell(row, button, config.categories[request.category]);
+    cell(row, request.customer, 'NIT ' + request.nit);
+    cell(row, element('span', config.states[request.state], 'badge ' + request.state));
+    cell(row, request.agent);
+    cell(row, dateTime.format(new Date(request.received_at)));
+    const deadline = deadlineText(request, +new Date(result.now));
+    cell(row, element('span', deadline.label, 'deadline ' + (deadline.className || '')), deadline.detail);
+    const arrow = element('button', '›', 'open-detail');
+    arrow.type = 'button';
+    arrow.setAttribute('aria-label', 'Ver detalle de ' + request.ticket);
+    arrow.addEventListener('click', () => run(() => openDetail(request.ticket)));
+    cell(row, arrow);
+    return row;
+  });
+  if (!rows.length) {
+    const row = document.createElement('tr');
+    const empty = element('td', 'No hay solicitudes para estos filtros.', 'empty');
+    empty.colSpan = 7;
+    row.append(empty);
+    rows.push(row);
+  }
+  tbody.replaceChildren(...rows);
+  const pages = Math.max(1, Math.ceil(result.total / result.size));
+  $('#page-label').textContent = 'Página ' + result.page + ' de ' + pages;
+  $('#prev').disabled = result.page <= 1;
+  $('#next').disabled = result.page >= pages;
+}
+
+async function loadCustomers() {
+  const generation = ++customerGeneration;
+  const customers = await api('/customers?' + new URLSearchParams({ q: $('#client-search').value }));
+  if (generation !== customerGeneration || !user) return;
+  const select = $('#create-form select[name=nit]');
+  const previous = select.selectedOptions[0];
+  const list = customers.map(person => [person.nit, person.name + ' · ' + person.nit]);
+  if (previous?.value && !list.some(([nit]) => nit === previous.value)) list.unshift([previous.value, previous.textContent]);
+  options(select, list, 'Selecciona un cliente', true);
+}
+
+function updateResponseField() {
+  const needed = $('#state-form select').value === 'resuelto';
+  $('#response-field').hidden = !needed;
+  $('#response-field textarea').required = needed;
+}
+
+function detailProperties(request, now) {
+  const time = deadlineText(request, now);
+  return [
+    ['Estado', config.states[request.state]], ['Responsable', request.agent],
+    ['Recepción', dateTime.format(new Date(request.received_at))], ['Canal', config.channels[request.channel]],
+    ['Tipo', config.categories[request.category]], ['Pedido', request.order_ref || '—'],
+    ['Plazo de 48 h', [time.label, time.detail].filter(Boolean).join(' · ')],
+    ['Resolución', request.resolved_at ? dateTime.format(new Date(request.resolved_at)) : '—']
+  ];
+}
+
+function eventSummary(entry) {
+  const prior = entry.before_values || {};
+  const after = entry.after_values || {};
+  const agentName = id => agents.find(agent => agent.id === id)?.name || id;
+  const values = [];
+  if (after.state) values.push([config.states[prior.state], config.states[after.state]].filter(Boolean).join(' → '));
+  if (after.agent_id) values.push([prior.agent_id, after.agent_id].filter(Boolean).map(agentName).join(' → '));
+  if (after.source_ref) values.push('Origen ' + after.source_ref);
+  if (entry.note) values.push(entry.note);
+  return values.join(' · ');
+}
+
+function renderDetail(data, keepDraft = false) {
+  const request = data.request;
+  currentDetail = request;
+  const priorState = keepDraft ? $('#state-form select').value : '';
+  const priorAgent = keepDraft ? $('#reassign-form select').value : '';
+  if (!keepDraft) {
+    $('#state-form').reset();
+    $('#reassign-form').reset();
+  }
+  $('#detail-error').textContent = '';
+  $('#reload-detail').hidden = true;
+  $('#detail-ticket').textContent = request.ticket;
+  $('#detail-customer').textContent = request.customer + ' · NIT ' + request.nit;
+  $('#detail-description').textContent = request.description;
+  $('#detail-meta').replaceChildren(...detailProperties(request, +new Date(data.now)).map(([name, value]) => {
+    const div = document.createElement('div');
+    div.append(element('dt', name), element('dd', value));
+    return div;
+  }));
+  const canEdit = user.role === 'coordinador' || user.id === request.agent_id;
+  const targets = openStates.includes(request.state) ? [...openStates, 'resuelto'].filter(state => state !== request.state)
+    : request.state === 'resuelto' ? ['cerrado'] : [];
+  $('#state-form').hidden = !canEdit || !targets.length;
+  options($('#state-form select'), targets.map(state => [state, config.states[state]]), 'Selecciona un estado');
+  if (targets.includes(priorState)) $('#state-form select').value = priorState;
+  updateResponseField();
+  const available = agents.filter(agent => agent.available && agent.id !== request.agent_id);
+  $('#reassign-form').hidden = user.role !== 'coordinador' || !openStates.includes(request.state);
+  options($('#reassign-form select'), available.map(agent => [agent.id, agent.name]), 'Selecciona un agente');
+  if (available.some(agent => agent.id === priorAgent)) $('#reassign-form select').value = priorAgent;
+  $('#events').replaceChildren(...data.events.map(entry => {
+    const li = document.createElement('li');
+    li.append(element('strong', actionLabel[entry.action] + ' · ' + entry.actor),
+      element('span', dateTime.format(new Date(entry.occurred_at)) + ' · ' + eventSummary(entry), 'cell-muted'));
+    return li;
+  }));
+}
+
+async function openDetail(ticket, keepDraft = false) {
+  await fetchAgents();
+  renderDetail(await api('/requests/' + encodeURIComponent(ticket)), keepDraft);
+  if (!$('#detail-dialog').open) $('#detail-dialog').showModal();
+}
+
+async function saveDetail(action, form) {
+  const button = form.querySelector('button[type=submit], button:not([type])');
+  button.disabled = true;
+  try {
+    const data = { ...formData(form), action, version: currentDetail.version };
+    const result = await api('/requests/' + encodeURIComponent(currentDetail.ticket), { method: 'PATCH', data });
+    renderDetail(result);
+    notice('Solicitud actualizada.');
+    await loadInbox();
+  } catch (error) {
+    $('#detail-error').textContent = error.message;
+    $('#reload-detail').hidden = error.status !== 409;
+  } finally {
+    button.disabled = false;
+  }
+}
+
+function renderAgents() {
+  $('#agent-list').replaceChildren(...agents.map(agent => {
+    const item = document.createElement('li');
+    const label = element('label', agent.available ? 'Disponible' : 'No disponible');
+    const checkbox = document.createElement('input');
+    checkbox.type = 'checkbox';
+    checkbox.checked = agent.available;
+    checkbox.setAttribute('aria-label', 'Disponibilidad de ' + agent.name);
+    checkbox.addEventListener('change', async () => {
+      checkbox.disabled = true;
+      try {
+        await api('/agents/' + encodeURIComponent(agent.id), { method: 'PATCH', data: { available: checkbox.checked } });
+        await fetchAgents();
+        renderAgents();
+      } catch (error) {
+        checkbox.checked = agent.available;
+        notice(error.message, true);
+      } finally {
+        checkbox.disabled = false;
+      }
+    });
+    label.prepend(checkbox);
+    item.append(element('strong', agent.name), label);
+    return item;
+  }));
+}
+
+async function loadMetrics() {
+  const values = formData($('#metrics-form'));
+  const result = await api('/metrics?' + new URLSearchParams(values));
+  const metric = $('#metric-result');
+  metric.replaceChildren();
+  if (!result.resolved) metric.textContent = 'Sin resoluciones en el periodo seleccionado.';
+  else metric.append(element('strong', percentage.format(result.percent) + ' %'),
+    element('span', result.compliant + ' de ' + result.resolved + ' resueltas dentro de 48 horas.'));
+}
+
+function importHint() {
+  const customers = $('#import-form select').value === 'clientes';
+  $('#import-form input[type=file]').accept = customers ? '.csv,.json' : '.csv';
+  $('#import-hint').textContent = customers
+    ? 'Usa las columnas nit y name. En JSON, guarda el NIT como texto.'
+    : 'Columnas CSV: source_ref, nit, channel, category, description, order_ref, agent_id, state, received_at. Usa una referencia estable y fechas ISO.';
+  $('#import-report').hidden = true;
+  lastImport = null;
+}
+
+async function submitImport(confirm) {
+  const form = $('#import-form');
+  if (!confirm) {
+    const file = form.elements.file.files[0];
+    if (!file || file.size > 3 * 1024 * 1024) throw new Error('Selecciona un archivo de máximo 3 MB.');
+    lastImport = { kind: form.elements.kind.value, format: file.name.split('.').pop().toLowerCase(), content: await file.text() };
+  }
+  if (!lastImport) return;
+  const pending = lastImport;
+  const result = await api('/import/' + pending.kind, { method: 'POST', data: { ...pending, confirm } });
+  if (lastImport !== pending) return;
+  const totals = result.totals;
+  $('#import-report').hidden = false;
+  $('#import-confirm').hidden = result.confirmed || !result.canConfirm || !totals.listo;
+  $('#import-totals').textContent = totals.total + ' filas · ' + totals.listo + ' listas · ' + totals.duplicado + ' duplicadas · ' + totals.excepcion + ' excepciones · ' + totals.cargado + ' cargadas';
+  $('#import-rows').replaceChildren(...result.rows.map(entry => {
+    const row = document.createElement('tr');
+    for (const text of [entry.row, entry.ref || '—', rowStatus[entry.status], [entry.message, entry.ticket].filter(Boolean).join(' ')]) row.append(element('td', text));
+    return row;
+  }));
+}
+
+const run = fn => Promise.resolve().then(fn).catch(error => notice(error.message, true));
+const bind = (selector, event, callback) => $(selector).addEventListener(event, callback);
+function debounce(fn) {
+  let timer;
+  return () => {
+    clearTimeout(timer);
+    timer = setTimeout(() => run(fn), 230);
+  };
+}
+
+bind('#login-form', 'submit', event => { event.preventDefault(); login(formData(event.target)); });
+bind('#demo-coordinator', 'click', () => login({ id: 'coord', password: 'Aurora-Demo-2026' }));
+bind('#demo-agent', 'click', () => login({ id: 'agente1', password: 'Aurora-Demo-2026' }));
+bind('#logout', 'click', () => run(async () => { await api('/logout', { method: 'POST', data: {} }); showLogin(); }));
+all('[data-view]').forEach(button => button.addEventListener('click', () => run(() => selectView(button.dataset.view))));
+all('.close-dialog').forEach(button => button.addEventListener('click', () => button.closest('dialog').close()));
+const createDialog = () => {
+  createKey ||= globalThis.auroraLocal?.newKey() ?? crypto.randomUUID();
+  $('#create-dialog').showModal();
+  run(loadCustomers);
+};
+bind('#new-request', 'click', createDialog);
+bind('#nav-create', 'click', createDialog);
+bind('#client-search', 'input', debounce(loadCustomers));
+bind('#create-form', 'submit', async event => {
+  event.preventDefault();
+  const form = event.target;
+  const button = form.querySelector('button:not([type])');
+  button.disabled = true;
+  $('#create-error').textContent = '';
+  all('.field-error').forEach(field => { field.textContent = ''; });
+  try {
+    const detail = await api('/requests', { method: 'POST', data: formData(form), headers: { 'Idempotency-Key': createKey } });
+    form.reset();
+    createKey = null;
+    $('#create-dialog').close();
+    await selectView('inbox');
+    notice('Solicitud radicada: ' + detail.request.ticket);
+  } catch (error) {
+    $('#create-error').textContent = error.message;
+    for (const field of all('.field-error')) field.textContent = error.fields?.[field.dataset.field] || '';
+  } finally {
+    button.disabled = false;
+  }
+});
+bind('#filters', 'submit', event => { event.preventDefault(); page = 1; run(loadInbox); });
+bind('#filters input', 'input', debounce(() => { page = 1; return loadInbox(); }));
+all('#filters select').forEach(select => select.addEventListener('change', () => { page = 1; run(loadInbox); }));
+bind('#refresh', 'click', () => run(loadInbox));
+bind('#prev', 'click', () => { page--; run(loadInbox); });
+bind('#next', 'click', () => { page++; run(loadInbox); });
+bind('#state-form select', 'change', updateResponseField);
+bind('#reload-detail', 'click', () => run(() => openDetail(currentDetail.ticket, true)));
+bind('#state-form', 'submit', event => { event.preventDefault(); saveDetail('estado', event.target); });
+bind('#reassign-form', 'submit', event => { event.preventDefault(); saveDetail('reasignar', event.target); });
+bind('#metrics-form', 'submit', event => { event.preventDefault(); run(loadMetrics); });
+bind('#import-form select', 'change', importHint);
+bind('#import-form input[type=file]', 'change', importHint);
+bind('#import-form', 'submit', event => { event.preventDefault(); run(() => submitImport(false)); });
+bind('#import-confirm', 'click', event => {
+  const button = event.currentTarget;
+  button.disabled = true;
+  run(async () => {
+    try { await submitImport(true); } finally { button.disabled = false; }
+  });
+});
+setInterval(() => {
+  if (user && view === 'inbox' && !document.hidden) run(loadInbox);
+}, 10000);
+
+window.addEventListener('aurora-local-reset', showLogin);
+
+try {
+  config = await api('/config');
+  importHint();
+  try { await showApp(await api('/me')); }
+  catch (error) { if (error.status !== 401) throw error; showLogin(); }
+} catch (error) {
+  showLogin();
+  $('#login-error').textContent = error.message;
+}
+
+</script>
+</body>
+</html>

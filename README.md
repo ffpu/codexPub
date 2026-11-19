@@ -1,8 +1,19 @@
 # Comercial Aurora · Gestión de solicitudes
 
-Aplicación interna para radicar, asignar y seguir solicitudes de clientes desde una bandeja compartida. El piloto usa cuatro cuentas de agente y una de coordinación. La demostración parte de datos ficticios y ofrece ambos roles.
+Aplicación para radicar, asignar y seguir solicitudes de clientes. La edición local funciona con un solo archivo HTML y guarda el trabajo en archivos JSON.
 
-## Probar en tu navegador
+## Abrir Aurora en tu equipo
+
+1. Descarga [index.html](index.html) del repositorio y ábrelo con doble clic en un navegador actualizado. Desde la vista de código de GitHub, descarga el archivo original con **Download raw file**.
+2. Elige un perfil y entra a la bandeja. Los datos iniciales son ficticios. Usa **Nueva base** para comenzar con una bandeja y un directorio vacíos, o **Abrir JSON** para recuperar una exportación de Aurora.
+3. Desde el perfil de coordinación puedes importar el directorio en JSON o CSV y los pendientes en CSV. Luego podrás radicar, asignar, actualizar y resolver solicitudes desde la bandeja.
+4. Selecciona **Guardar JSON** antes de cerrar. El navegador descarga una copia completa del archivo de trabajo. Al regresar, abre la copia más reciente. El HTML se mantiene como el archivo de la aplicación y el JSON contiene los registros.
+
+Ejecutar esta edición requiere solo un navegador con JavaScript. Funciona sin conexión y está pensada para editar un archivo por una persona a la vez. Los perfiles organizan el flujo y el historial en el navegador. Mantén los JSON de trabajo en el almacenamiento privado de tu equipo.
+
+Para publicar la interfaz como sitio estático, configura GitHub Pages para servir la rama `main` desde la raíz. Publica el HTML y conserva los JSON de trabajo fuera del repositorio. Para regenerar el HTML al editar su código fuente, ejecuta `npm run build:local`. Para repetir la prueba automatizada, usa `npm run test:local` con Chromium.
+
+## Edición con servidor para el piloto compartido
 
 ### Contenedor independiente
 

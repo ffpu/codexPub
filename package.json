@@ -16,7 +16,9 @@
     "migrate": "node scripts/admin.js migrate",
     "demo": "node scripts/admin.js demo",
     "user": "node scripts/admin.js user",
+    "build:local": "node scripts/build-local.js",
     "test": "node --test test/api.test.js",
+    "test:local": "node --test test/local.test.js",
     "test:browser": "node --test test/browser.test.js"
   }
 }

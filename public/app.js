@@ -25,7 +25,8 @@ let noticeTimeout;
 
 async function api(route, options = {}) {
   const { method = 'GET', data, headers } = options;
-  const response = await fetch('/api' + route, {
+  const transport = globalThis.auroraLocal?.request ?? fetch;
+  const response = await transport('/api' + route, {
     method,
     headers: { ...(data === undefined ? {} : { 'Content-Type': 'application/json' }), ...headers },
     body: data === undefined ? undefined : JSON.stringify(data)
@@ -66,6 +67,7 @@ function showLogin() {
   inboxGeneration++;
   customerGeneration++;
   currentDetail = null;
+  createKey = null;
   lastImport = null;
   all('dialog[open]').forEach(dialog => dialog.close());
   $('#create-form').reset();
@@ -385,7 +387,7 @@ bind('#logout', 'click', () => run(async () => { await api('/logout', { method: 
 all('[data-view]').forEach(button => button.addEventListener('click', () => run(() => selectView(button.dataset.view))));
 all('.close-dialog').forEach(button => button.addEventListener('click', () => button.closest('dialog').close()));
 const createDialog = () => {
-  createKey ||= crypto.randomUUID();
+  createKey ||= globalThis.auroraLocal?.newKey() ?? crypto.randomUUID();
   $('#create-dialog').showModal();
   run(loadCustomers);
 };
@@ -437,6 +439,8 @@ bind('#import-confirm', 'click', event => {
 setInterval(() => {
   if (user && view === 'inbox' && !document.hidden) run(loadInbox);
 }, 10000);
+
+window.addEventListener('aurora-local-reset', showLogin);
 
 try {
   config = await api('/config');

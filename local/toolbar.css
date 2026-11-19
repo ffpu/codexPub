@@ -1,0 +1,9 @@
+.local-files{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;padding:10px clamp(12px,3vw,30px);background:#edf4eb;border-bottom:1px solid #dce7d9}
+.local-files>div:first-child{display:grid;gap:3px;min-width:0}
+.local-files strong{font-size:.78rem}
+#local-status{font-size:.77rem;color:var(--muted);overflow-wrap:anywhere}
+#local-status.unsaved{color:#8d4b13;font-weight:650}
+.local-files button{min-height:34px}
+.login,.login-brand{min-height:calc(100vh - 57px)}
+.noscript-local{padding:15px}
+@media(max-width:760px){.login-brand,.login{min-height:0}}
