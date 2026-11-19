@@ -4,6 +4,21 @@ Aplicación interna para radicar, asignar y seguir solicitudes de clientes desde
 
 ## Probar en tu navegador
 
+### Contenedor independiente
+
+La imagen incluye la aplicación, Node.js, PostgreSQL y los datos ficticios. Solo necesitas Docker. Descarga `aurora-piloto-linux-amd64.tar.gz` y ejecuta estos comandos desde el directorio donde guardaste el archivo:
+
+```sh
+docker load -i aurora-piloto-linux-amd64.tar.gz
+docker run -d --name aurora --stop-timeout 30 -p 127.0.0.1:3000:3000 -v aurora-datos:/var/lib/postgresql/data aurora-piloto:1.0
+```
+
+Abre **http://localhost:3000** en el equipo que ejecuta Docker y selecciona **Coordinador** o **Agente**. El primer arranque inicializa la base y carga la demostración. Usa `docker logs aurora` para ver el progreso, `docker stop aurora` para detenerlo y `docker start aurora` para volver a abrirlo. El volumen `aurora-datos` conserva los datos aunque se reemplace el contenedor.
+
+La imagen descargable es para Docker con contenedores Linux en x86-64. Puedes construir una imagen nativa en tu equipo desde el código fuente con `docker build -t aurora-piloto:1.0 .`. Para operar con datos reales, consulta la [configuración del contenedor en modo piloto](docs/operacion-piloto.md#contenedor-independiente-en-modo-piloto).
+
+### Desarrollo sin la imagen de Aurora
+
 Requisitos: Node.js 22.20 o posterior, npm y PostgreSQL. Si tienes Docker, puedes crear la base de demostración como se indica abajo. En una terminal desde el directorio del proyecto:
 
 ```sh

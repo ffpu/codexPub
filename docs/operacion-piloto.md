@@ -18,6 +18,19 @@ npm start
 
 Usa contraseñas únicas de al menos 12 caracteres y entrega las credenciales por el canal interno acordado. Repetir el comando de usuario actualiza la contraseña y revoca sesiones previas. Corre `npm run demo` únicamente con la base de demostración. Verifica que `/health` devuelva `{"ready":true}` y que las cuentas de un entorno sean rechazadas en el otro.
 
+### Contenedor independiente en modo piloto
+
+La imagen integra PostgreSQL y usa un socket local con autenticación por usuario del sistema. Publica solo el puerto de la aplicación. Crea un volumen exclusivo para el piloto, separado del volumen de demostración. Este ejemplo supone un proxy HTTPS en el mismo equipo que envía el tráfico a `127.0.0.1:3100`:
+
+```sh
+docker run -d --name aurora-piloto --stop-timeout 30 -p 127.0.0.1:3100:3000 \
+  -e APP_MODE=pilot -e PUBLIC_ORIGIN=https://aurora.example.com -e TRUST_PROXY=1 \
+  -v aurora-piloto-datos:/var/lib/postgresql/data aurora-piloto:1.0
+docker exec -i -u postgres aurora-piloto node scripts/admin.js user coordinacion coordinador "Nombre del coordinador" < /ruta/segura/clave-coordinacion
+```
+
+Cambia el dominio del ejemplo y provisiona las demás cuentas con el mismo comando. El modo piloto aplica las migraciones en el primer arranque y espera que el operador cree las cuentas. Para una copia lógica del contenedor, usa `docker exec -u postgres aurora-piloto pg_dump -Fc -d aurora > aurora-piloto.dump`. Conserva el volumen al sustituir o actualizar el contenedor.
+
 ## Directorio y solicitudes pendientes
 
 El directorio admite un CSV UTF-8 con columnas `nit,name` o un arreglo JSON con los mismos campos. Conserva el NIT como texto y no lo formatees como un número. El CSV usa coma como delimitador y comillas dobles para valores que contienen comas.
